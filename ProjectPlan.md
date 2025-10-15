@@ -74,7 +74,7 @@ https://www.housingstudies.org/data-portal/browse/?view_as=view-table
 
 A data portal from DePaul’s Institute for Housing Studies containing a large variety of housing related demographics.
 
-# Timeline:
+# Timeline
 
 ### By each of the following dates we will have…
 
@@ -109,4 +109,10 @@ A data portal from DePaul’s Institute for Housing Studies containing a large v
 
 ### Wednesday, December 10th: 
 - Committed our final report, visualizations, and automated process
+
+# Constraints
+One important limitation of this project to note is that the crime dataset only includes reported crimes. This is the best data we can get, but we know that many crimes go unreported, especially minor offenses and offenses for which reporting can have drastic personal consequences such as domestic and sexual abuse crimes. This underreporting can lead to incomplete representations of actual crime patterns. Another constraint is that the datasets, although they are regularly updated, may not always reflect the absolute most current conditions. As a result, some analyses might not fully capture more recent changes in crime trends or infrastructure developments.
+
+# Gaps
+A key gap in our study is the lack of complete detailed infrastructure data. We have combined many datasets in order to create a nearly whole picture of the infrastructure and demographics of Chicago, however in doing this we could certainly be missing certain insights. Additionally, the presence of social and political unrest are not taken into account in our project. Factors such as these can create unusual patterns of crime, so it is essential to keep this in mind as we draw conclusions from our data. 
 
