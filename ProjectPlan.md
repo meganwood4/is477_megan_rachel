@@ -73,3 +73,40 @@ A dataset containing the distribution and characteristics of affordable housing 
 https://www.housingstudies.org/data-portal/browse/?view_as=view-table
 
 A data portal from DePaul’s Institute for Housing Studies containing a large variety of housing related demographics.
+
+# Timeline:
+
+### By each of the following dates we will have…
+
+### Thursday, October 16th:
+- Committed our detailed project plan outlining our goals, research questions, team member roles and responsibilities, datasets, project timeline, known constraints, and gaps
+
+### Tuesday, October 21st:
+- Analyzed our chosen datasets, ensuring they are accessible and of quality
+- Performed a FAIR analysis on the datasets, documenting our findings
+- Identified and documented processes to ensure ethical data handling and handle potential constraints
+
+### Tuesday, October 28th:
+- Begun the process of cleaning, organizing, and storing our datasets
+- Connected our project to a data lifecycle structure
+
+### Tuesday, November 4th:
+- Finished the process of cleaning, organizing, and storing our datasets
+- Begun working with our data to create visualizations and derive meaningful statistics.
+- Begun the data enrichment, extraction, and integration processes
+
+### Tuesday, November 11th: 
+- Committed our detailed interim status report, updating our project plan if necessary
+
+### Thursday, November 20th:
+- Assessed any necessary changes based on progress and feedback
+
+### Thursday, December 4th:
+- Finalized our visualizations and automated process
+- Begun our final report of our findings
+- Ensured reproducibility and transparency
+- Finalized our metadata and documentation
+
+### Wednesday, December 10th: 
+- Committed our final report, visualizations, and automated process
+
