@@ -125,6 +125,8 @@ https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neigh
 
 # Our Contribution Summaries
 
-## Megan:
+### Megan:
 My contributions included cleaning, organizing, exploring, and integrating our Chicago datasets. These datasets included crime reports, library locations, park facilities, affordable housing metrics, and neighborhood boundaries. I preprocessed the datasets by removing irrelevant fields, handling missing values, and standardizing formats and naming conventions. I then converted all of the location based datasets into GeoDataFrames and spatially joined the crimes, libraries, and parks with their respective neighborhoods to enable neighborhood-level comparisons. From these new datasets, I began some initial exploratory data analysis. Moving forward, we will be able to use these datasets to create meaningful statistics and visualizations in order to support inference and answer our research questions. 
+
+### Rachel:
 
