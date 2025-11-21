@@ -76,3 +76,48 @@ https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neigh
 **Accessible:** The dataset is able to be downloaded to an API endpoint or in other formats making it extremely accessible. The metadata is easy to interpret and well labeled.
 
 **Reusable:** The usage license is not clearly listed, however this dataset is very versatile in the ways it can be used. There are possibilities to combine this data with other datasets or utilize GIS software for spatial analysis. Additionally, it is transparent about how the data was collected and the accuracy of the data.  
+
+# Updated Timeline
+
+### By each of the following dates we will have…
+
+### Thursday, October 16th:
+- Committed our detailed project plan outlining our goals, research questions, team member roles and responsibilities, datasets, project timeline, known constraints, and gaps
+    - Completed
+
+### Tuesday, October 21st:
+- Analyzed our chosen datasets, ensuring they are accessible and of quality
+    - Completed
+- Performed a FAIR analysis on the datasets, documenting our findings
+    - Completed
+- Identified and documented processes to ensure ethical data handling and handle potential constraints
+    - Completed
+
+### Tuesday, October 28th:
+- Begun the process of cleaning, organizing, and storing our datasets
+    - Completed
+- Connected our project to a data lifecycle structure
+    - Completed
+
+### Tuesday, November 4th:
+- Finished the process of cleaning, organizing, and storing our datasets
+    - Completed
+- Begun working with our data to create visualizations and derive meaningful statistics.
+    - In Progress
+- Begun the data enrichment, extraction, and integration processes
+    - In Progress
+
+### Thursday, November 20th:
+- Committed our detailed interim status report, updating our project plan if necessary
+    - Completed
+
+### Thursday, December 4th:
+- Assessed any necessary changes based on progress and feedback
+- Finalize any statsical findings
+- Finalized our visualizations and automated process
+- Begun our final report of our findings
+- Ensured reproducibility and transparency
+- Finalized our metadata and documentation
+
+### Wednesday, December 10th: 
+- Committed our final report, visualizations, and automated process
