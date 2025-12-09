@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: Megans-MacBook-Pro-50.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+run_final_project        1
+total                    2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Dec  9 02:28:12 2025]
+localrule run_final_project:
+    input: data/crimes.csv, data/libraries.csv, data/parks.csv, data/affordable_housing.xlsx, data/neighborhoods.csv, final_project.py
+    output: graphs/total_crimes_by_neighborhood.png, graphs/parks_vs_crime_by_neighborhood.png, graphs/libraries_vs_crime_by_neighborhood.png, graphs/percent_affordable_vs_crime_by_neighborhood.png, graphs/units_affordable_vs_crime_by_neighborhood.png
+    jobid: 1
+    reason: Missing output files: graphs/units_affordable_vs_crime_by_neighborhood.png, graphs/total_crimes_by_neighborhood.png, graphs/percent_affordable_vs_crime_by_neighborhood.png, graphs/parks_vs_crime_by_neighborhood.png, graphs/libraries_vs_crime_by_neighborhood.png
+    resources: tmpdir=/var/folders/xx/mmkk9vf555g_qx7rlg2fj8k00000gn/T
+[Tue Dec  9 02:28:14 2025]
+Finished jobid: 1 (Rule: run_final_project)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Dec  9 02:28:14 2025]
+localrule all:
+    input: graphs/total_crimes_by_neighborhood.png, graphs/parks_vs_crime_by_neighborhood.png, graphs/libraries_vs_crime_by_neighborhood.png, graphs/percent_affordable_vs_crime_by_neighborhood.png, graphs/units_affordable_vs_crime_by_neighborhood.png
+    jobid: 0
+    reason: Input files updated by another job: graphs/units_affordable_vs_crime_by_neighborhood.png, graphs/total_crimes_by_neighborhood.png, graphs/percent_affordable_vs_crime_by_neighborhood.png, graphs/parks_vs_crime_by_neighborhood.png, graphs/libraries_vs_crime_by_neighborhood.png
+    resources: tmpdir=/var/folders/xx/mmkk9vf555g_qx7rlg2fj8k00000gn/T
+[Tue Dec  9 02:28:14 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/meganwood/Documents/FALL '25/IS 477/is477_megan_rachel/.snakemake/log/2025-12-09T022812.415368.snakemake.log
