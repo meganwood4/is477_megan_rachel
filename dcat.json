@@ -1,0 +1,12 @@
+{
+    "@type": "dcat:Dataset",
+    "accessLevel": "public",
+    "contactPoint": {
+        "fn": "Megan Wood",
+        "hasEmail": "mailto:mwood35@illinois.edu"
+    },
+    "description": "Chicago Crime vs. Infrastructure analysis (datasets, report, and resulting graphs).",
+    "modified": "2025-12-09",
+    "Title": "Chicago Crime vs. Infrastructure Analysis",
+    "License": ""
+}
