@@ -47,4 +47,16 @@ These fields were not needed because new geometry would be created using coordin
 
 Additionally, the coordinate columns were renamed so that they matched the naming convention used across the other datasets. “X_COORD”was renamed to “LONGITUDE,” and “Y_COORD” was renamed to “LATITUDE.”
 
+## Affordable Housing Dataset
+
+The affordable housing dataset required a lot of preprocessing because it was in a different format than the previous datasets. Because the file contained extra header rows and formatting information, only the first 79 rows and relevant columns were retained. The neighborhood name field, labeled “Area,” was cleaned by removing extra whitespace and converting all text to uppercase to ensure consistency with the neighborhoods dataset. Entries labeled “CITY OF CHICAGO” were removed because they did not represent individual neighborhoods and would have caused errors during merging. A new column called PRI_NEIGH was created by reformatting the cleaned neighborhood names into title case to match the naming conventions used in the neighborhood boundaries dataset. Finally, only the following relevant columns were retained:
+
+- PRI_NEIGH
+- Total Units
+- Total Affordable
+- % Affordable
+
+## Neighborhood Boundaries Dataset
+
+The neighborhood boundaries data set also required cleaning. The primary neighborhood name column was cleaned by stripping extra spaces and converting all text to uppercase. This allowed for accurate matching with the cleaned affordable housing dataset. To ensure that both datasets aligned properly, only neighborhoods that existed in both datasets were retained. Finally, the neighborhood boundary geometry was converted into valid geometric objects using the Shapely library.
 
