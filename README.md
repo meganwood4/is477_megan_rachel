@@ -2,6 +2,9 @@
 
 ### Contributors: 
 - Megan Wood
+
+My contributions for the final leg of this project primarily focused on implementing the full Python data pipeline, including final data cleaning, dataset integration, merging and aggregating the datasets, and the creation of all visualizations. I then documented the data cleaning and integration processes and wrote explanations and conclusions for each of the visualizations. Finally, I created the project’s DCAT metadata file, the requirements.txt file, and the Snakefile for workflow automation.
+
 - Rachel Li
 
 # Summary
