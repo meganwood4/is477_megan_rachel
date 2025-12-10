@@ -63,7 +63,10 @@ Legally, the dataset is openly published but it does not explicitly state licens
 
 # Obtaining Datasets
 
-To obtain the datasets we used throughout the project, they can be accessed through the links and then either downloaded into various formats or through API key. We chose to download the datasets rather than using API since the Chicago datasets were massive due to the extensive detail and amount of data collected throughout the years. Therefore, we had to download and clean the datasets to filter out irrelevant data for our project. This data can be viewed in our GitHub repository under the ‘data’ folder.
+To obtain the datasets we used throughout the project, they can be accessed through the links and then either downloaded into various formats or through API key. We chose to download the datasets rather than using API since the Chicago datasets were massive due to the extensive detail and amount of data collected throughout the years. Therefore, we had to download and clean the datasets to filter out irrelevant data for our project. This data can be viewed in our GitHub repository under the ‘data’ folder and in our Box folder.
+
+Box link: https://uofi.box.com/s/p9a3i4fpm6a1ufodlp61uzyu2q80q6ee
+Github link: https://github.com/meganwood4/is477_megan_rachel.git
 
 ### Data Quality
 
