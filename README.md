@@ -234,3 +234,16 @@ This scatter plot compares the total number of affordable housing units to total
 # Workflow Automation and Provenance
 
 To ensure reproducibility and automation, this project used a Snakemake workflow to manage the full data processing and visualization pipeline. The Snakefile was configured to track all raw input datasets and automatically execute the final_project.py script whenever inputs changed (although we don't predict input changes being necessary). It also defined the five output graphs as targets, allowing Snakemake to verify successful execution and prevent unnecessary reruns.
+
+# References
+
+City of Chicago/Chicago Data Portal. (n.d.). _Boundaries - Neighborhoods._ https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9
+
+City of Chicago/Chicago Data Portal. (n.d.). _Citywide Affordable Rental Housing Analysis._ https://www.chicago.gov/city/en/depts/dcd/supp_info/citywide-affordable-rental-housing-aalysis.html
+
+City of Chicago/Chicago Data Portal. (n.d.). _Crimes - 2001 to Present._ https://data.cityofchicago.org/stories/s/Crimes-2001-to-present-Dashboard/5cd6-ry5g
+
+City of Chicago/Chicago Data Portal. (n.d.). _Parks - Chicago Park District Facilities (current)._ https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y
+
+City of Chicago/Chicago Public Library. (n.d.). _Libraries - Locations, Contact Information, and Usual Hours of Operation._ https://data.cityofchicago.org/Education/Libraries-Locations-Contact-Information-and-Usual-/x8fc-8rcq
+
