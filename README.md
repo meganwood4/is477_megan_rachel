@@ -17,6 +17,49 @@ Our overarching research question is: **How is urban infrastructure related to c
 
 Our overall finding is that the physical infrastructures we examined do not show a meaningful correlation with either higher or lower crime rates. Moreover, none of these infrastructures appear to cause crime. When we analyzed the number of libraries, number of parks, the percentage of affordable housing, and number of affordable housing units in relation to crime rates, we generally did not observe strong or consistent correlations. The only visualization that displayed a noticeable positive linear relationship was between the number of affordable housing units to crime. This pattern likely reflects the fact that neighborhoods with more housing units tend to be larger and therefore have more total crime because they contain more residents. Similarly, although we observed higher crime counts in areas with more public facilities, this does not indicate that these facilities contribute to crime. Instead, when considering all the variables together, our findings suggest that underlying factors such as population density, higher foot traffic, and differences in maintenance or surveillance across neighborhoods are more plausible explanations for the observed patterns.
 
+### Data Profile
+
+This project integrates several publicly available datasets from the Chicago Data Portal, an open-data platform maintained by the city of Chicago. These datasets support a wide range of civic, academic, and policy research and are updated regularly depending on the data provider. The following section will summarize each dataset used in this project, describe what information each dataset contains, and identify relevant ethical and legal considerations associated with their use.
+
+- Affordable Housing Dataset
+- https://www.chicago.gov/city/en/depts/dcd/supp_info/citywide-affordable-rental-housing-aalysis.html 
+
+This dataset provides comprehensive data about affordable rental housing developments across Chicago. It includes information such as the types and number of affordable housing units in different neighborhoods. This information makes it possible to analyze the distribution and scale of affordable housing across all neighborhoods in Chicago.
+
+In terms of the legal constraints, the dataset is publicly accessible and intended for civic use. However, it does not provide a clear, formal usage license. This means that while the dataset is openly published, it is not fully explicit about restrictions or allowances for redistribution or derivative works. Ethically, the data poses minimal risk since it only contains the total and percentage of affordable housing units in the neighborhood rather than personal resident data. However, because affordable housing carries social stigma in some contexts, researchers must take this into account and avoid interpreting or presenting the data in ways that inadvertently reinforce negative stereotypes about neighborhoods with higher concentrations of affordable housing.
+
+- Chicago Crime Dataset
+- https://data.cityofchicago.org/stories/s/Crimes-2001-to-present-Dashboard/5cd6-ry5g 
+
+This dataset contains incident-level reports of crimes recorded by the Chicago Police Department, spanning more than two decades. The dataset includes fields such as the type of crime, date and time of the incident, location details, and case number. Because of its size and level of detail, it is a foundational dataset for criminology and public-safety related studies in Chicago.
+
+Ethically and legally, this dataset requires careful consideration. Although all personally identifiable information is removed, crime data has the potential to reinforce harmful narratives about certain communities. Therefore, researchers must contextualize analyses and avoid oversimplified conclusions when using this dataset. The dataset is openly licensed however it is unclear whether there are restrictions about if this dataset can be combined with other datasets. Still, because reported crimes reflect both policing practices and crime rates, it is important to acknowledge potential systemic biases inherent in the data.
+
+- Chicago Park District Facilities Dataset
+- https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y 
+
+This dataset contains information about parks and recreational facilities managed by the Chicago Park District. It includes fields such as park names, locations, facility attributes, amenities, and operating details. This data makes it possible to analyze the distribution of recreational resources across neighborhoods and explore potential relationships between access to public facilities and community health and safety outcomes.
+
+While the dataset is publicly accessible and contains no sensitive personal data, its licensing terms are not explicitly stated. This lack of clarity does not prevent academic use but may limit reuse in commercial or redistributed contexts. Ethically, this dataset is considered low risk since it concerns public facilities rather than individuals. However, when interpreted alongside crime data, it is important to avoid implying that the presence or absence of facilities directly causes social outcomes without sufficient evidence.
+
+- Libraries Dataset
+- https://data.cityofchicago.org/Education/Libraries-Locations-Contact-Information-and-Usual-/x8fc-8rcq/about_data 
+
+This dataset provides detailed information about Chicago Public Library branches including their locations, contact details, hours, and neighborhood placement. It is well documented and includes clear information about how the data is maintained and updated. 
+
+Since libraries are public institutions, the dataset carries no privacy risks. The portal includes a dedicated usage license, reducing legal ambiguity and supporting broader reuse. The data is useful for examining spatial relationships between library access, neighborhood infrastructure, and social indicators such as crime or economic development. However, it is still important to avoid overinterpreting correlations without accounting for broader context.
+
+- Neighborhood Boundaries Dataset
+- https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Neighborhoods/bbvz-uum9 
+
+This dataset provides official geographic boundaries for Chicago’s neighborhoods. It includes geospatial metadata that allows researchers to map infrastructure and crime data to specific neighborhoods. Because neighborhood boundaries are widely used across academic and municipal planning contexts, this dataset is foundational for spatial analysis and aggregation of the other datasets used in this project.
+
+Legally, the dataset is openly published but it does not explicitly state licensing details. Ethically, the data itself poses no risk but analyses that map sensitive datasets, like crime reports, onto neighborhood boundaries must be conducted responsibly. Spatial aggregation can reinforce stereotypes about communities if not contextualized within socioeconomic, demographic, and structural factors.
+
+### Obtaining Datasets
+
+To obtain the datasets we used throughout the project, they can be accessed through the links and then either downloaded into various formats or through API key. We chose to download the datasets rather than using API since the Chicago datasets were massive due to the extensive detail and amount of data collected throughout the years. Therefore, we had to download and clean the datasets to filter out irrelevant data for our project. This data can be viewed in our GitHub repository under the ‘data’ folder.
+
 # Data Cleaning Process
 
 ### Summary
