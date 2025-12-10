@@ -7,6 +7,8 @@ My contributions for the final leg of this project primarily focused on implemen
 
 - Rachel Li
 
+My contributions for wrapping up this project included analyzing the data and visualizations, and writing the project report. I wrote a comprehensive summary of our overall project, motivations, findings, and an analysis of all our datasets used. Additionally, Using the visualizations made by Megan, I concluded our findings that helped shaped our reflection of the project and ideas for future work.
+
 # Summary
 In this project, we sought to understand how different aspects of urban infrastructures and housing demographics correlate with crime patterns across the city of Chicago. Our central goal was to examine measurable relationships between environmental factors such as access to public park facilities and libraries, the distribution of affordable housing units, and neighborhood boundary characteristics in relation to both the amount and types of crime committed in those areas. By studying these structural and social patterns, we aimed to uncover data-driven insight that can encourage safer, more equitable urban design and development. Cities are built on complex social and physical systems, and our research focuses on how particular features of the built environment may unintentionally encourage, reduce, or redistribute criminal activity.
 
@@ -62,6 +64,74 @@ Legally, the dataset is openly published but it does not explicitly state licens
 # Obtaining Datasets
 
 To obtain the datasets we used throughout the project, they can be accessed through the links and then either downloaded into various formats or through API key. We chose to download the datasets rather than using API since the Chicago datasets were massive due to the extensive detail and amount of data collected throughout the years. Therefore, we had to download and clean the datasets to filter out irrelevant data for our project. This data can be viewed in our GitHub repository under the ‘data’ folder.
+
+### Data Quality
+
+Assessing data quality is essential for determining the validity of our results, especially given the diversity of datasets used in this project. Because our research examines relationships between crime and forms of urban infrastructure including parks, libraries, affordable housing units, and neighborhood boundaries, we evaluated each dataset in terms of completeness, accuracy, consistency, temporal relevance, and potential sources of bias.
+
+- Affordable Housing Dataset
+
+The affordable housing dataset provides a comprehensive list of affordable rental properties across Chicago, including the number of affordable units within each building. In general, this dataset is complete with respect to property-level attributes, but it has several limitations. First, update frequency is not explicitly stated, which raises concerns about whether newly built or demolished properties are fully reflected. Some fields contained extra white spaces and unstandardized capitalizations. Despite these limitations, the dataset is consistent in structure and numerical fields (such as unit counts) that appeared reliable. The largest bias risk comes from the dataset's scope. It includes only developments formally recognized by the City of Chicago and may overlook informal or unregistered affordable housing arrangements, potentially underestimating the actual affordable housing landscape.
+
+- Chicago Crime Reports Dataset
+
+The crime dataset is one of the most robust sources, with millions of incident-level records spanning over two decades. It is updated frequently and includes detailed attributes such as crime type, date/time, location, and case number. However, crime data inherently reflects police activity, not strictly the occurrence of crime. Neighborhoods with higher police presence may show artificially inflated crime counts simply because more incidents are detected and reported. Additionally, missing values are rare but do appear in certain locations or secondary description fields. Overall, the dataset is reliable for analysis, but we must also acknowledge that crime reports measure both actual events and patterns of enforcement.
+
+- Chicago Park District Facilities Dataset
+
+This dataset was relatively small, containing only dozens or hundreds of records. It is easy to work with and contains well-organized metadata. It includes facility characteristics, amenities, and geographic placement. Therefore, this dataset shows high completeness and low likelihood of error. Their main limitation is the lack of context due to only containing information relating to its locations and amenities. It would be helpful if the dataset included information about facility quality, usage rates, open hours, or on-site surveillance since these factors could meaningfully influence crime patterns. Thus, while facility presence is accurately recorded, it may not fully reflect real-world accessibility or community engagement.
+
+- Libraries Datasets
+
+This dataset was also pretty small but contained well documented metadata. It includes information on branch type, hours, contact information, and location. There were little to no standardization errors and overall a well-rounded dataset. However, given that this dataset only contains information about the location and contact information, it would be even more useful if data about the facility usage or surveillance information was included as well– for our project specifically. Overall, this was a useful dataset to see a wider range of public amenities in relation to crime rates.
+
+- Neighborhood Boundaries Dataset
+
+The neighborhood boundaries dataset is widely used across research and municipal planning. It includes accurate and regularly maintained shapefiles representing the city’s community areas. Because nearly all Chicago datasets use community area boundaries for aggregation, this dataset provides a consistent spatial framework. Its quality is high, but there are still some constraints. Neighborhoods are treated as uniform spatial units which can cause complications when paired with crime locations. Therefore, this spatial generalization is the dataset’s primary limitation. Taken together, the datasets are of generally high quality and suitable for macro-level analysis. 
+
+### Findings
+
+Our overarching question of “How is urban infrastructure related to crime rates and types in Chicago?” guided a set of analyses combining infrastructure datasets with crime data. The analysis revealed that the relationship between Chicago’s urban infrastructure and crime rates is far more complex than simple correlations might suggest. When looking across neighborhoods, we found that the presence or density of libraries, parks, and affordable housing, whether measured by percentage or unit count, did not reliably predict higher or lower levels of crime. 
+
+When examining public facilities such as libraries, we did not observe any consistent pattern between the number of libraries in a neighborhood and the total crime count. Some neighborhoods with multiple libraries reported high crime, while others reported low crime, and the same variability was present in neighborhoods with few or no libraries. The distribution was broad and scattered, and overall showed no linear or nonlinear tendency. Parks exhibited a similarly inconsistent relationship. Despite expectations that parks might either reduce crime by increasing positive community presence or increase crime by attracting loitering, no clear trend emerged in either direction. Crime levels varied widely among neighborhoods regardless of how many park facilities they contained.
+
+Affordable housing, measured as the percentage of units designated affordable within each neighborhood, also did not show a clear connection to crime rates. Neighborhoods with high proportions of affordable housing sometimes had low crime levels, while some neighborhoods with low proportions had much higher crime. There was no meaningful pattern suggesting that affordable housing concentration either encourages or mitigates crime. In this respect, the data challenge common assumptions that affordable housing drives certain types of neighborhood outcomes.
+
+The only variable that showed a visibly stronger relationship with crime was the total number of affordable housing units. Neighborhoods with more affordable units generally had higher total crime counts. At first glance this might appear to suggest a correlation, but considering the results of the other variables’ analysis, it strongly indicates that this relationship is driven not by affordable housing itself but by the size and overall density of the neighborhood. Areas with more total units tend to be larger and more populated. Because crime is typically measured as an absolute count rather than as a rate, neighborhoods with more residents naturally accumulate more total crime incidents. This suggests that the correlation between affordable housing unit count and crime arises from scale effects rather than from any causal relationship.
+
+These findings point toward a broader interpretive conclusion that the urban features examined in this project, libraries, parks, affordable housing percentages, and affordable unit counts, are not strong predictors of crime outcomes in Chicago. Instead, underlying contextual factors seem to exert greater influence. Population density, neighborhood size, levels of commercial activity, socioeconomic inequality, policing activity, and community stability likely play much more substantial roles in determining where and how crime arises. In other words, the infrastructures we analyzed are embedded within larger systems of urban dynamics, and any observed associations are likely mediated by these underlying structural forces rather than caused directly by infrastructure itself.
+
+However, there are a few limitations in the data and method that may partially obscure more subtle relationships. Because the analysis was conducted at the neighborhood level, it may overlook finer spatial patterns that occur at the block or street level. It also does not incorporate temporal changes such as the construction of new facilities or shifts in population that might reveal lagged effects. Moreover, factors such as the condition, usage frequency, and maintenance of public facilities are not captured in the datasets, nor are policing levels or reporting behaviors, all of which can largely influence crime data. Without socioeconomic variables like income or unemployment, the analysis cannot fully account for underlying factors.
+
+Despite these limitations, the overall result remains clear. The infrastructures studied do not show meaningful or consistent correlations with crime, and none of them appear to cause crime. The observable patterns are better explained by population size, neighborhood density, and other contextual forces. These findings therefore reinforce the idea that crime in urban settings is shaped by multifaceted social and structural dynamics, rather than by the presence or absence of public facilities or affordable housing.
+
+### Future Work
+
+While our project provides valuable insights, it also reveals several limitations and opportunities for deeper research. Throughout this project, we learned that our research lacks the scale and results that accounts for all the underlying factors that influence crime. However, conducting this research was still beneficial in the sense that we can rule out the idea that the presence of physical infrastructures impacts crime rates. This creates a stepping stone for future work that can expand on the amount and types of factors to pinpoint what variables influence crimes. Therefore, here are several ideas for future work that could produce more robust and actionable findings.
+
+1. Incorporating population and demographic variables
+
+A major limitation of our current analysis is that it does not explicitly control for population or demographic factors. Demographics and population density are factors we did not consider while conducting our analysis, but discovered is essential to consider when connecting crime rates and underlying factors. Future work could incorporate socioeconomic indicators such as income, unemployment rates, racial segregation, and education levels– which could help show how infrastructure interacts with existing structural inequalities to shape crime patterns.
+
+2. Examine infrastructure quality, not just presence
+
+The datasets we used only track the existence of facilities, such as parks and libraries, not their condition, hours of operation, staffing, programming, or safety features. We discovered that these attributes could play a crucial role in interpreting our current findings. Future research could integrate new datasets or field observations that capture the quality and usability of infrastructure. For example, parks with high-quality lighting and frequent programming may deter crime, whereas neglected parks may attract it.
+
+3. Improving the affordable housing analysis.
+
+Affordable housing is complex and multifaceted. Given our dataset focuses only on formally designated affordable units, this limits our ability to accurately reflect our data to reality. Future research could build a more complete housing profile by adding eviction data, data on naturally occurring affordable housing, building code violations, and rental market dynamics. This could allow for a more comprehensive evaluation of how housing stability relates to crime.
+
+4. Combining qualitative and quantitative methods
+
+While we used quantitative data, this cannot fully capture lived experiences. The data we used is the data that is reported, meaning some details could have gone unnoticed. Interviews with community members, urban planners, librarians, crime-prevention specialists, or affordable housing residents could provide context that the numbers alone cannot. This mixed-methods approach would help interpret ambiguous findings and highlight community priorities.
+
+5. Machine learning or statistical modeling
+
+For this project, we utilized basic data analysis and visualizations to gather findings. However, future work could move beyond scatterplots to more sophisticated models like regressions, clustering, and random forests to identify multivariate relationships. Such models may uncover hidden patterns or interactions between datasets that are not visible through descriptive visualizations alone.
+
+6. Ethical considerations and community impact
+
+Finally, future work must continue to address ethical considerations. As mentioned in previous sections, crime data is deeply intertwined with histories of over-policing and racialized surveillance. In further research studies, researchers could adopt frameworks such as data justice or community centered data ethics to ensure that the work does not reinforce harmful stereotypes. Future work could also integrate community-led datasets or participatory mapping to produce findings that better reflect neighborhood realities.
 
 # Data Cleaning Process
 
