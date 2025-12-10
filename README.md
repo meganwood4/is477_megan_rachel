@@ -4,7 +4,7 @@
 - Megan Wood
 - Rachel Li
 
-### Summary
+# Summary
 In this project, we sought to understand how different aspects of urban infrastructures and housing demographics correlate with crime patterns across the city of Chicago. Our central goal was to examine measurable relationships between environmental factors such as access to public park facilities and libraries, the distribution of affordable housing units, and neighborhood boundary characteristics in relation to both the amount and types of crime committed in those areas. By studying these structural and social patterns, we aimed to uncover data-driven insight that can encourage safer, more equitable urban design and development. Cities are built on complex social and physical systems, and our research focuses on how particular features of the built environment may unintentionally encourage, reduce, or redistribute criminal activity.
 
 Urban planners, community developers, and policymakers often make decisions that indirectly influence public safety indirectly through zoning laws, public infrastructure funding, and patterns of community investment. However, many of these decisions are not rooted in quantitative assessments of how people interact with public spaces or how neighborhood design may shape levels of risk. For example, accessible green spaces and well-maintained public libraries can function as community anchors that foster shared norms of social responsibility that can reduce crimes. On the other hand, zoning decisions that create sharp socioeconomic boundaries or disproportionately concentrate affordable housing in certain districts may contribute to an uneven distribution of opportunities, policing, and social tension. Our project seeks to address this by applying data science techniques to evaluate how specific characteristics of Chicago’s infrastructure relate to where and when crimes occur. Ultimately our research asks whether the physical and demographic landscape of Chicago helps protect residents or inadvertently puts certain communities at greater risk.
@@ -17,7 +17,7 @@ Our overarching research question is: **How is urban infrastructure related to c
 
 Our overall finding is that the physical infrastructures we examined do not show a meaningful correlation with either higher or lower crime rates. Moreover, none of these infrastructures appear to cause crime. When we analyzed the number of libraries, number of parks, the percentage of affordable housing, and number of affordable housing units in relation to crime rates, we generally did not observe strong or consistent correlations. The only visualization that displayed a noticeable positive linear relationship was between the number of affordable housing units to crime. This pattern likely reflects the fact that neighborhoods with more housing units tend to be larger and therefore have more total crime because they contain more residents. Similarly, although we observed higher crime counts in areas with more public facilities, this does not indicate that these facilities contribute to crime. Instead, when considering all the variables together, our findings suggest that underlying factors such as population density, higher foot traffic, and differences in maintenance or surveillance across neighborhoods are more plausible explanations for the observed patterns.
 
-### Data Profile
+# Data Profile
 
 This project integrates several publicly available datasets from the Chicago Data Portal, an open-data platform maintained by the city of Chicago. These datasets support a wide range of civic, academic, and policy research and are updated regularly depending on the data provider. The following section will summarize each dataset used in this project, describe what information each dataset contains, and identify relevant ethical and legal considerations associated with their use.
 
@@ -56,7 +56,7 @@ This dataset provides official geographic boundaries for Chicago’s neighborhoo
 
 Legally, the dataset is openly published but it does not explicitly state licensing details. Ethically, the data itself poses no risk but analyses that map sensitive datasets, like crime reports, onto neighborhood boundaries must be conducted responsibly. Spatial aggregation can reinforce stereotypes about communities if not contextualized within socioeconomic, demographic, and structural factors.
 
-### Obtaining Datasets
+# Obtaining Datasets
 
 To obtain the datasets we used throughout the project, they can be accessed through the links and then either downloaded into various formats or through API key. We chose to download the datasets rather than using API since the Chicago datasets were massive due to the extensive detail and amount of data collected throughout the years. Therefore, we had to download and clean the datasets to filter out irrelevant data for our project. This data can be viewed in our GitHub repository under the ‘data’ folder.
 
@@ -157,3 +157,7 @@ This scatter plot shows how the percentage of affordable housing relates to tota
 ### 5. Total Affordable Units vs. Crime by Neighborhood
 
 This scatter plot compares the total number of affordable housing units to total crime across neighborhoods. There is a positive linear relationship, suggesting that neighborhoods with more affordable units often have higher crime totals.
+
+# Workflow Automation and Provenance
+
+To ensure reproducibility and automation, this project used a Snakemake workflow to manage the full data processing and visualization pipeline. The Snakefile was configured to track all raw input datasets and automatically execute the final_project.py script whenever inputs changed (although we don't predict input changes being necessary). It also defined the five output graphs as targets, allowing Snakemake to verify successful execution and prevent unnecessary reruns.
