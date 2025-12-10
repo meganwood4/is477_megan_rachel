@@ -122,3 +122,38 @@ The affordable housing dataset required a lot of preprocessing because it was in
 
 The neighborhood boundaries data set also required cleaning. The primary neighborhood name column was cleaned by stripping extra spaces and converting all text to uppercase. This allowed for accurate matching with the cleaned affordable housing dataset. To ensure that both datasets aligned properly, only neighborhoods that existed in both datasets were retained. Finally, the neighborhood boundary geometry was converted into valid geometric objects using the Shapely library.
 
+# Data Integration Process
+
+The data integration process for this project focused on combining multiple cleaned datasets into a single, unified dataset that could support neighborhood-level analysis. After each dataset was independently cleaned and standardized as described above, geographic relationships were used as the basis for integrating crime data, library locations, park locations, affordable housing information, and neighborhood boundaries.
+
+The first step in the integration process involved converting all of the cleaned DataFrames into GeoDataFrames. The crime, library, and park datasets were each transformed from traditional DataFrames into GeoDataFrames by creating point geometries from their latitude and longitude coordinates. The neighborhoods dataset was already structured with polygon geometries representing the boundaries of each neighborhood. All GeoDataFrames were assigned the same coordinate reference system (EPSG:4326), ensuring that every dataset aligned correctly in geographic space. 
+Once the datasets shared the same spatial reference system, spatial joins were performed to assign each point-based observation to a specific neighborhood. Each crime incident was matched to the neighborhood polygon in which it occurred, and any crimes that did not fall within a neighborhood boundary were removed to avoid inaccuracies. The same process was repeated for both libraries and parks, allowing each of these locations to be associated with a specific neighborhood. This step was critical to our project because it transformed raw point-based geographic data into neighborhood-level information that could be aggregated and compared.
+
+After the spatial joins were completed, aggregation was performed to summarize data at the neighborhood level. For the parks dataset, duplicate park names within the same neighborhood were dropped before grouping to prevent overcounting. Then, the number of unique parks per neighborhood was calculated. A similar process was used for libraries, where unique branches were identified and counted within each neighborhood. 
+Crime data integration involved grouping incidents by both neighborhood and crime type. First, total crime counts were calculated for each neighborhood by summing all crime occurrences. Then, a pivot table was created to transform individual crime types into separate columns, allowing crime patterns to be compared across neighborhoods in a structured format. This produced both an overall crime measure and a detailed breakdown of crime categories.
+
+The affordable housing dataset was integrated using a traditional data merge rather than a spatial join. After neighborhood names were standardized during the cleaning phase, affordable housing data was merged into the main dataset using the neighborhood name as the common key. This allowed housing unit totals, affordable unit counts, and percent affordability to be directly compared against crime rates and public resource availability.
+
+Finally, all integrated datasets were merged into a single master GeoDataFrame that contained neighborhood geometry, public resource counts, housing data, and crime statistics so that a spatial visualization could be created. Any remaining missing values were filled with zeros to ensure consistency and prevent errors during visualization. This fully integrated dataset served as the backbone of the project’s analytical workflow, supporting both the geographic maps and the statistical scatter plots used to explore relationships between crime and city infrastructure.
+
+# Understanding our Data Visualizations
+
+### 1. Total Crimes by Chicago Neighborhood
+
+This map visualizes the spatial distribution of total crime across neighborhoods. Higher crime concentrations appear clustered in specific areas, showing that crime is unevenly distributed across the city.
+   
+### 2. Parks vs. Crime by Neighborhood
+  
+This scatter plot compares the number of parks to total crime across neighborhoods. There is a weak positive relationship, and some neighborhoods with many parks also show high crime, suggesting that park presence is not the only factor that has impact on crime levels.
+
+### 3. Libraries vs. Crime by Neighborhood
+
+This scatter plot shows the relationship between the number of public libraries and total crime in each neighborhood. While neighborhoods with more libraries tend to have higher crime totals, this is likely influenced by population density rather than indicating that libraries increase crime.
+
+### 4. % Affordable Housing vs. Crime by Neighborhood
+
+This scatter plot shows how the percentage of affordable housing relates to total crime across neighborhoods. The wide spread of points shows little relationship, indicating that percent affordability does not have a large correlation with crime.
+
+### 5. Total Affordable Units vs. Crime by Neighborhood
+
+This scatter plot compares the total number of affordable housing units to total crime across neighborhoods. There is a positive linear relationship, suggesting that neighborhoods with more affordable units often have higher crime totals.
